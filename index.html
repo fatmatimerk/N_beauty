@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> N_beauty </title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="file.css">
+  <link rel="stylesheet" href="css .css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  <style>
+  
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color:  rgb(206, 110, 0);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}  
+#mynav{
+  background-color: rgba(255, 215, 154, 0.993) ;
+}
+.jumbotron {
+    background-color: white ;
+    color:  rgb(206, 110, 0);
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+.container-fluid {
+    padding: 60px 50px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.logo-small {
+    color:  rgb(206, 110, 0);
+    font-size: 50px;
+}
+.logo {
+    color:  rgb(206, 110, 0);
+    font-size: 200px;
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color:  rgb(206, 110, 0);
+}
+.carousel-indicators li {
+    border-color:  rgb(206, 110, 0);
+}
+.carousel-indicators li.active {
+    background-color:  rgb(206, 110, 0);
+ }
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+.item span {
+    font-style: normal;
+}
+.panel {
+    border: 1px solid  rgb(206, 110, 0); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-footer .btn:hover {
+    border: 1px solid  rgb(206, 110, 0);
+    background-color: #fff !important;
+    color:  rgb(206, 110, 0);
+}
+.panel-heading {
+    color: #fff !important;
+    background-color:  rgb(206, 110, 0) !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.panel-footer {
+    background-color: white !important;
+}
+.panel-footer h3 {
+    font-size: 32px;
+}
+.panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color:  rgb(206, 110, 0);
+    color: #fff;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color:  rgb(206, 110, 0);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: rgb(206, 110, 0) !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color:  rgb(146, 79, 2) !important;
+    background-color: rgb(214, 117, 7) !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:  rgb(206, 110, 0);
+}
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+#s :hover{
+  width:70px;
+}
+
+#s1{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+}
+
+#s2{
+  background-color:green; width:50px;
+  border-radius: 50%; 
+}
+
+#s3{
+  background-color:rgb(131, 6, 89); width:50px;
+  border-radius: 30%; 
+
+}
+
+#s4{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  
+}
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+
+  }
+
+  #aboutim{
+    width: 200px ; border-radius: 50%; background-color: #303030;
+  }
+  #serimg{
+    width: 200px ; border-radius: 50%;
+  }
+  #contact{
+    background-color: rgb(206, 110, 0); 
+  }
+  #cp{
+    color: #303030; 
+  }
+
+
+
+
+  </style>
+</head>
+
+<body >
+ 
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" >
+  
+  <nav class="navbar navbar-default navbar-fixed-top" id="mynav">
+    <div class="container" >
+      <div class="navbar-header" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage"><img src="Capture1-removebg-preview.png" id="lim"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar" >
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#pricing">PRICING</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="jumbotron text-center" ><br><br><br>
+        <p>We specialize in natural beauty products </p> 
+    <form>
+      <div class="input-group">
+        <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-danger">Subscribe</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Container (About Section) -->
+  <br><br> 
+  <div class="text-center">
+    <h2>Aboute Our Beauty Saloon</h2><br><br>
+  </div>
+  <div class="container-fluid bg-grey" id="about">
+    <div class="row">
+      <div class="col-sm-4"><br>
+        <img src="images.jpg" class="glyphicon glyphicon-globe logo slideanim" id="aboutim"> <br><br><br>
+        <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      </div>
+      <div class="col-sm-8">
+        <h2>Our Values</h2><br>
+        <h4> In our salon, we look forward to providing the service in the best way and making customers number one in our priorities. His happiness and satisfaction with our service is our goal, and we make him a member of our family, not just a customer with whom our relationship breaks off after providing the service.
+          We hope to be at the best of your expectations, and we hope that our services have won your admiration. </h4><br>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Container (Services Section) -->
+  <div id="services" class="container-fluid text-center">
+    <h2>SERVICES</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <img src="beauty.jpg" class="glyphicon glyphicon-off logo-small" id="serimg">
+        <h4> Makeup </h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="s-2.jpg" class="glyphicon glyphicon-off logo-small" id="serimg">
+        <h4> Tattoo </h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="pic.png" class="glyphicon glyphicon-leaf logo-small" id="serimg">
+        <h4>Injection</h4>
+      </div>
+    </div>
+    <br><br>
+    <div class="row slideanim">
+      <div class="col-sm-4" >
+        <img src="Capturer1.PNG" class="glyphicon glyphicon-off logo-small" id="serimg">
+        <h4> Hair care </h4>
+      </div>
+      <div class="col-sm-4">
+       <img src="Capturer.PNG" class="glyphicon glyphicon-leaf logo-small" id="serimg">
+        <h4> Skin-care </h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="download.jpg" class="glyphicon glyphicon-leaf logo-small" id="serimg">
+        <h4 > Body Care </h4>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Container (Pricing Section) -->
+  <div id="pricing" class="container-fluid">
+    <div class="text-center">
+      <h2>Pricing</h2>
+      <h4>Choose a payment plan that works for you</h4>
+    </div>
+    <div class="row slideanim">
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1> Makeup </h1>
+          </div>
+          <div class="panel-body">
+            <img src="beauty.jpg" class="glyphicon glyphicon-leaf logo-small" id="serimg"><br><br>
+            <p><strong>300 LE </strong> In the beauty salon </p>
+            <p><strong>350 LE </strong> In the home </p>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>      
+      </div>     
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1> Tattoo  </h1>
+          </div>
+          <div class="panel-body">
+            <img src="s-2.jpg" class="glyphicon glyphicon-leaf logo-small" id="serimg"><br><br>
+            <p><strong>100 LE </strong> In the beauty salon </p>
+            <p><strong>150 LE </strong> In the home </p>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>      
+      </div>       
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Injection </h1>
+          </div>
+          <div class="panel-body">
+            <img src="pic.png" class="glyphicon glyphicon-leaf logo-small" id="serimg"><br><br>
+            <p><strong>100 LE </strong> In the beauty salon </p>
+            <p><strong>150 LE </strong> In the home </p>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>      
+      </div>    
+    </div>
+    <br> <br>
+    <div class="row slideanim">
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1> Body Care </h1>
+          </div>
+          <div class="panel-body">
+            <img src="download.jpg" class="glyphicon glyphicon-leaf logo-small" id="serimg"><br><br>
+            <p><strong>200 LE </strong> In the beauty salon </p>
+            <p><strong>250 LE </strong> In the home </p>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>      
+      </div>     
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1> Hair Care </h1>
+          </div>
+          <div class="panel-body">
+            <img src="Capturer1.PNG" class="glyphicon glyphicon-leaf logo-small" id="serimg"><br><br>
+            <p><strong>100 LE </strong> In the beauty salon </p>
+            <p><strong>150 LE </strong> In the home </p>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>      
+      </div>       
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1> Skin-care </h1>
+          </div>
+          <div class="panel-body">
+            <img src="Capturer.PNG" class="glyphicon glyphicon-leaf logo-small" id="serimg"><br><br>
+            <p><strong>100 LE </strong> In the beauty salon </p>
+            <p><strong>150 LE </strong> In the home </p>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>      
+      </div>    
+    </div>
+  </div>
+  </div>
+  
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center" >CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p id="cp">Contact us and we'll get back to you within 24 hours.</p>
+        <p id="cp"><span class="glyphicon glyphicon-map-marker"></span> Egypt, Red Sea </p>
+        <p id="cp"><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+        <p id="cp"><span class="glyphicon glyphicon-envelope"></span> N_beauty@gmail.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image of location/map -->  
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <div class="BOX fot"> 
+
+      <div >
+        <div class="text-center">
+          <h2> Follow US in </h2><br><br>
+        </div>
+        <a href="https://web.facebook.com/login/?_rdc=1&_rdr" id="s"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="s1"  ><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+        <a href="https://web.whatsapp.com/" id="s"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="s2"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+        <a href="https://www.instagram.com/" id="s"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="s3"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a> 
+        <a href="https://twitter.com/i/flow/login" id="s"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="s4"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+      </div>
+       <hr>
+       <ruby id="ru">
+         <dt>Devolper</dt>
+         <rt>fatmatemarek@gmail.com</rt>
+       </ruby>
+     </div>
+       
+   </div>
+  </footer>
+  
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+    
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+  
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+  </script>
+  
+  </body>
+  </html>
+      
+   
+</body>
+</html>
+
+
